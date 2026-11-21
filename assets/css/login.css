@@ -1,0 +1,62 @@
+/* =============================================
+   LOGIN PAGE — Sparklee Laundry Admin
+   ============================================= */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+}
+.login-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px 32px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+.brand .brand-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+}
+.brand .brand-icon .material-symbols-outlined { font-size: 24px; }
+.brand-text h1 { font-size: 18px; font-weight: 700; }
+.brand-text p  { font-size: 12px; color: var(--text-muted); }
+
+h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background .15s;
+}
+button[type="submit"]:hover { background: var(--primary-hover); }
+
+.back-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+.back-link a { color: var(--primary); text-decoration: none; font-weight: 600; }

@@ -1,0 +1,148 @@
+/* =============================================
+   GLOBAL / SHARED STYLES — Sparklee Laundry
+   Digunakan oleh semua halaman
+   ============================================= */
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* CSS Variables */
+:root {
+    --primary:       #0D41C7;
+    --primary-hover:  #0a35a3;
+    --primary-light: #E4E6FF;
+    --surface:       #FBF8FF;
+    --surface-low:   #F3F2FE;
+    --surface-card:  #FFFFFF;
+    --border:        #C4C5D7;
+    --text:          #1A1B23;
+    --text-muted:    #444654;
+    --success-bg:    #D1FADF;
+    --success-text:  #0B462B;
+    --warning-bg:    #FFEEDE;
+    --warning-text:  #472A00;
+    --info-bg:       #E5DEFF;
+    --info-text:     #2D009D;
+    --danger-bg:     #FFDAD6;
+    --danger-text:   #93000A;
+}
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background: var(--surface);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ── Brand Icon (shared) ── */
+.brand-icon {
+    width: 36px; height: 36px;
+    background: var(--primary); color: #fff;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+}
+.brand-icon .material-symbols-outlined { font-size: 20px; }
+.brand-name { font-size: 16px; font-weight: 700; }
+
+/* ── Shared Buttons ── */
+.btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: background .15s;
+}
+.btn-ghost   { background: var(--surface-card); color: var(--text); }
+.btn-ghost:hover { background: var(--surface-low); }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn .material-symbols-outlined { font-size: 18px; }
+
+/* ── Hero Section (shared) ── */
+.hero {
+    background: linear-gradient(135deg, #0D41C7 0%, #5B44CA 100%);
+    color: #fff;
+    text-align: center;
+}
+.hero h1 { font-weight: 700; }
+.hero p  { opacity: .85; }
+
+.btn-hero-primary {
+    padding: 13px 28px;
+    background: #fff; color: var(--primary);
+    border: none; border-radius: 10px;
+    font-size: 15px; font-weight: 700;
+    font-family: inherit; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none;
+    transition: background .15s;
+}
+.btn-hero-primary:hover { background: var(--primary-light); }
+.btn-hero-primary .material-symbols-outlined { font-size: 20px; }
+
+.btn-hero-secondary {
+    padding: 13px 28px;
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 10px;
+    font-size: 15px; font-weight: 600;
+    font-family: inherit; cursor: pointer;
+    text-decoration: none;
+    transition: background .15s;
+}
+.btn-hero-secondary:hover { background: rgba(255,255,255,.25); }
+.btn-hero-secondary .material-symbols-outlined { font-size: 20px; }
+
+/* ── Form Controls (shared) ── */
+label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.form-group { margin-bottom: 16px; }
+
+input[type="text"], input[type="password"], select, textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    background: var(--surface-low);
+    color: var(--text);
+    transition: border .15s;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none; border-color: var(--primary); background: #fff;
+}
+textarea { resize: vertical; }
+
+/* ── Status Badges (shared by dashboard & potentially others) ── */
+.badge {
+    display: inline-flex; align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px; font-weight: 600;
+    white-space: nowrap;
+}
+.badge-pending    { background: var(--warning-bg); color: var(--warning-text); }
+.badge-diproses   { background: var(--info-bg);    color: var(--info-text); }
+.badge-selesai    { background: var(--success-bg); color: var(--success-text); }
+.badge-dibatalkan { background: var(--danger-bg);  color: var(--danger-text); }
+
+/* ── Alert ── */
+.alert-error {
+    background: var(--danger-bg);
+    color: var(--danger-text);
+    border: 1px solid #f5c6c6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.alert-error .material-symbols-outlined { font-size: 18px; }

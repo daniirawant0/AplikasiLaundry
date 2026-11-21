@@ -1,0 +1,98 @@
+/* =============================================
+   PESANAN PAGE — Sparklee Laundry Order Form
+   ============================================= */
+
+/* Topbar */
+.topbar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.topbar-brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: inherit;
+}
+
+/* Hero (pesanan-specific sizing) */
+.hero { padding: 48px 28px; }
+.hero h1 { font-size: 28px; margin-bottom: 8px; }
+.hero p  { font-size: 15px; }
+
+/* Services grid (picker pills) */
+.services-section {
+    max-width: 900px; margin: 0 auto;
+    padding: 36px 24px 0;
+}
+.section-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 32px;
+}
+.service-pill {
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+    font-size: 13px; font-weight: 500;
+}
+.service-pill .material-symbols-outlined { font-size: 24px; display: block; margin-bottom: 6px; color: var(--text-muted); }
+.service-pill:hover, .service-pill.selected {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+.service-pill.selected .material-symbols-outlined { color: var(--primary); }
+
+/* Form card */
+.form-card {
+    max-width: 900px; margin: 0 auto 48px;
+    padding: 0 24px;
+}
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+}
+.card-title { font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group.full { grid-column: 1 / -1; }
+
+.form-actions {
+    display: flex; gap: 12px; align-items: center;
+    margin-top: 8px;
+}
+.btn-submit {
+    padding: 11px 28px;
+    background: var(--primary); color: #fff;
+    border: none; border-radius: 8px;
+    font-size: 14px; font-weight: 700;
+    font-family: inherit; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: background .15s;
+}
+.btn-submit:hover { background: var(--primary-hover); }
+.btn-submit .material-symbols-outlined { font-size: 18px; }
+.btn-back {
+    padding: 11px 20px;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px; font-weight: 600;
+    font-family: inherit; cursor: pointer;
+    color: var(--text-muted); text-decoration: none;
+    transition: background .15s;
+}
+.btn-back:hover { background: var(--surface-low); }
+
+@media (max-width: 600px) {
+    .form-row { grid-template-columns: 1fr; }
+}
